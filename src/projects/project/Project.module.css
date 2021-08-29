@@ -1,0 +1,25 @@
+.projectBlock {
+    width: 80%;
+    background-color: #beb4b4;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titleDescription {
+    max-width: 80%;
+}
+
+.titleProject {
+
+}
+
+.description {
+
+}
+
+.icon {
+    width: 150px;
+    height: 150px;
+    background-color: #f3cdcd;
+}
