@@ -2,21 +2,26 @@ import React from "react";
 import style from './Skills.module.css'
 import styleContainer from './../common/styles/Container.module.css'
 import {Skill} from "./skill/Skill";
+import jsIcon from '../common/images/jsIcon.png'
 
-export const Skills = () => {
+
+export const Skills = ({title, description}) => {
     return (
         <div className={style.skillsBlock}>
             <div className={`${styleContainer.container} ${style.skillsContainer}`}>
-                <h2 className={style.title}>Skills</h2>
+                <h2 className={style.title}>My skills</h2>
                 <div className={style.skills}>
-                    <Skill title={"Js"}
-                           description={"Search for the keywords to learn more about each warning."}/>
-                    <Skill title={"CSS"}
-                           description={" it with appropriate styles. Learn more:"}/>
-                    <Skill title={"React"}
-                           description={" attribute requires a valid value to be accessible. Provide a valid, navigable address as the hr"}/>
-                    <Skill title={"Redux"}
-                           description={" but still need the element to resemble a link, use a button and change"}/>
+
+                    <Skill title={title.js}
+                           description={description.js}
+                           icon={jsIcon}/>
+
+                    <Skill title={title.css}
+                           description={description.css}/>
+
+                    <Skill title={title.react}
+                           description={description.react}/>
+
                 </div>
             </div>
         </div>

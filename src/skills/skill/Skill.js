@@ -2,13 +2,15 @@ import React from "react";
 import style from './Skill.module.css'
 
 
-export const Skill = (props) => {
+export const Skill = ({title, description, icon}) => {
     return (
         <div className={style.skill}>
-            <div className={style.icon}></div>
-            <h3>{props.title}</h3>
-            <span className={style.description}>{props.description}</span>
+            <img className={style.icon} src={icon} alt="icon"/>
+            <h3>{title}</h3>
+            <span className={style.description}>{description}</span>
         </div>
     );
 }
 
+
+{/*<div className={style.icon}>{<img src={icon} alt="icon"/>}</div>*/}

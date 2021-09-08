@@ -14,9 +14,7 @@ export const Projects = (props) => {
                 <Project title={'To Do List'}
                          description={'TodoList is a simple web application with which you can create a list of tasks, mark done and delete them.'}
                 />
-                <Project title={'Pizza market'}
-                         description={'Numerous regional variations of pizza in the United States have been developed'}
-                />
+
             </div>
 
         </div>
