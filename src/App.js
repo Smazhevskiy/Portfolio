@@ -3,18 +3,18 @@ import {Header} from "./header/Header";
 import {Main} from "./main/Main";
 import {Skills} from "./skills/Skills";
 import {Projects} from "./projects/Projects";
-import {Contact} from "./contact/Contact";
+import {Contacts} from "./contact/Contacts";
+
 
 const skillDescriptions = {
     js: "Search for the keywords to learn more about each warning",
     css: " it with appropriate styles. Learn more:",
     react: " attribute requires a valid value to be accessible. Provide a valid, navigable address as the hr"
 }
-
-const skillTitles = {
+export const skillTitles = {
     js: 'Js',
     css: 'Css',
-    react: 'React'
+    react: 'React',
 }
 
 
@@ -27,7 +27,7 @@ const App = () => {
             <Main/>
             <Skills title={skillTitles} description={skillDescriptions}/>
             <Projects/>
-            <Contact/>
+            <Contacts/>
         </div>
     );
 }
