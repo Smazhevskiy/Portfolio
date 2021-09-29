@@ -3,7 +3,10 @@ import {Header} from "./header/Header";
 import {Main} from "./main/Main";
 import {Skills} from "./skills/Skills";
 import {Projects} from "./projects/Projects";
-import {Contacts} from "./contact/Contacts";
+import {Contacts} from "./contacts/Contacts";
+import {Footer} from "./footer/Footer";
+
+
 
 
 const skillDescriptions = {
@@ -28,6 +31,7 @@ const App = () => {
             <Skills title={skillTitles} description={skillDescriptions}/>
             <Projects/>
             <Contacts/>
+            <Footer/>
         </div>
     );
 }

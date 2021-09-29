@@ -10,13 +10,6 @@
     align-items: center;
 }
 
-.contactMeBlock {
-    border: 1px solid;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
 .gitHubBlock {
     border: 1px solid;
@@ -24,4 +17,28 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    align-items: center;
+}
+
+
+.form input, .form textArea {
+    width: 100%;
+}
+
+.submitBtn {
+    padding: 10px 20px;
+    width: 120px;
+    background-color: darkgray;
+}
+
+@media screen and (max-width: 460px) {
+    .form {
+        width: 100%;
+    }
 }
