@@ -1,8 +1,12 @@
 @import "src/common/styles/sass/variables";
 
+
+
 .title {
      margin: 0;
-     .title h2 {
+     position: relative;
+     .text {
+	    position: relative;
 	    font-family: 'Josefin Sans', sans-serif;
 	    color: $textColor;
 	    margin: 0 0 30px;
@@ -11,7 +15,6 @@
 	    font-size: 36px;
 	    line-height: 1.2;
 	    letter-spacing: 4px;
-	    position: relative;
      }
      &::before {
 	    content: '';
@@ -19,10 +22,11 @@
 	    width: 55px;
 	    height: 1px;
 	    background: $primaryColor;
-	    bottom: -12px;
+	    bottom: 12px;
 	    left: 50%;
 	    transform: translate(-50%, 50%);
-
      }
+
 }
+
 

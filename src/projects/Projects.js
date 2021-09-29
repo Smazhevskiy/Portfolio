@@ -2,10 +2,10 @@ import React from "react";
 import s from './Projects.module.scss'
 import stylesContainer from './../common/styles/Container.module.css'
 import {Project} from "./project/Project";
-import {Title} from "../common/components/title/Title";
 import socialImg from '../assets/images/socialNetwork.jpg'
 import todoImg from '../assets/images/toDolList.jpg'
 import cardsImg from '../assets/images/cardsImg.jpeg'
+import {Title} from "../common/components/title/Title";
 
 
 
@@ -24,7 +24,7 @@ export const Projects = (props) => {
     return (
         <div className={s.projectsBlock}>
             <div className={`${stylesContainer.container} ${s.projectsContainer}`}>
-                <Title title={'Projects'}/>
+               <Title text={'Projects'}/>
                 <div className={s.projects}>
                     <Project
                         style={socialNetwork} //обязательно через атрибут style
