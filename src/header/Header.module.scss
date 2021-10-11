@@ -1,8 +1,10 @@
+@import "src/common/styles/sass/variables";
+
 .headerBlock {
     height: 80px;
-    background-color: beige;
+    background-color: $bgSecondColor;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    border: 1px solid;
+    color: white;
 }
