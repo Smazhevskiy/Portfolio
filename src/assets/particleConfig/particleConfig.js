@@ -5,7 +5,7 @@ export const particlesConfig ={
             bubble: {
                 distance: 400,
                 duration: 2,
-                opacity: 0.8,
+                opacity: 0.5,
                 size: 40,
             },
         },
@@ -29,7 +29,6 @@ export const particlesConfig ={
             speed: 1,
             straight: false,
         },
-
         opacity: {
             value: 0.5,
         },

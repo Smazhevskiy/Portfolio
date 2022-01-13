@@ -6,6 +6,7 @@ import jsIcon from './../assets/images/js-icon.svg'
 import htmlIcon from './../assets/images/html-icon.svg'
 import tsIcon from './../assets/images/ts-icon.svg'
 import {Title} from '../common/components/title/Title'
+import Fade from 'react-reveal/Fade'
 
 
 
@@ -20,21 +21,23 @@ export const Skills = () => {
         <div id="skills" className={s.skillsBlock}>
             <div className={s.container}>
                 <Title text={'Skills'}/>
-                <div className={s.skills}>
-                    <Skill title={'JS'}
-                           icon={js}
-                           description={'Data Types, Functions, Loops, Currying, Closure, This, Array Methods, ' +
-                           'Recursion, EventLoop, Promise, Async-Await...'}/>
-                    <Skill title={'CSS'}
-                           icon={html}
-                           description={'Flexbox, SASS, CSS3, CSS-Modules, Styled Components...'}/>
-                    <Skill title={'React'}
-                           icon={react}
-                           description={'SPA, Functional components, Hooks, Material-UI, Forms, Routes, Pagination...'}/>
-                    <Skill title={'TypeScript'}
-                           icon={ts}
-                           description={'Migrate projects from JS to TS, Generics, typeof, ReturnType, Enum...'}/>
-                </div>
+                <Fade>
+                    <div className={s.skills}>
+                        <Skill title={'JS'}
+                               icon={js}
+                               description={'Data Types, Functions, Loops, Currying, Closure, This, Array Methods, ' +
+                               'Recursion, EventLoop, Promise, Async-Await...'}/>
+                        <Skill title={'CSS'}
+                               icon={html}
+                               description={'Flexbox, SASS, CSS3, CSS-Modules, Styled Components...'}/>
+                        <Skill title={'React'}
+                               icon={react}
+                               description={'SPA, Functional components, Hooks, Material-UI, Forms, Routes, Pagination...'}/>
+                        <Skill title={'TypeScript'}
+                               icon={ts}
+                               description={'Migrate projects from JS to TS, Generics, typeof, ReturnType, Enum...'}/>
+                    </div>
+                </Fade>
             </div>
         </div>
     )

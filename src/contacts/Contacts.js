@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
-import style from './Contacts.module.scss'
+import s from './Contacts.module.scss'
 import axios from 'axios'
 import {Title} from '../common/components/title/Title'
+import Fade from 'react-reveal/Fade'
 
 
 
@@ -52,33 +53,35 @@ export const Contacts = ({setModal}) => {
         }
     }
     return (
-        <div id="contacts" className={style.contactsBlock}>
-            <div className={style.container}>
+        <div id="contacts" className={s.contactsBlock}>
+            <div className={s.container}>
                 <Title text={'Contacts'}/>
-                <form className={style.contactForm}>
-                    <input className={style.formArea}
-                           type="text"
-                           placeholder="Name"
-                           value={name}
-                           onChange={(e) => ChangeInputName(e)}
-                    />
-                    <input className={style.formArea}
-                           type="text"
-                           placeholder="E-mail or telephone"
-                           value={contacts}
-                           onChange={(e) => ChangeInputEmail(e)}
-                    />
-                    <textarea className={style.messageArea}
-                              placeholder="Message"
-                              value={message}
-                              onChange={(e) => ChangeInputMessage(e)}
-                    />
-                    <button type="submit" onClick={onSubmitHandler}>Send message</button>
-                    {
-                        disabled ? <span className={style.sendFont}>Loading...</span> : sendMessage.length > 0
-                            ? <span className={style.sendFont}>{sendMessage}</span> : null
-                    }
-                </form>
+                <Fade>
+                    <form className={s.contactForm}>
+                        <input className={s.formArea}
+                               type="text"
+                               placeholder="Name"
+                               value={name}
+                               onChange={(e) => ChangeInputName(e)}
+                        />
+                        <input className={s.formArea}
+                               type="text"
+                               placeholder="E-mail or telephone"
+                               value={contacts}
+                               onChange={(e) => ChangeInputEmail(e)}
+                        />
+                        <textarea className={s.messageArea}
+                                  placeholder="Message"
+                                  value={message}
+                                  onChange={(e) => ChangeInputMessage(e)}
+                        />
+                        <button type="submit" onClick={onSubmitHandler}>Send message</button>
+                        {
+                            disabled ? <span className={s.sendFont}>Loading...</span> : sendMessage.length > 0
+                                ? <span className={s.sendFont}>{sendMessage}</span> : null
+                        }
+                    </form>
+                </Fade>
             </div>
         </div>
 
