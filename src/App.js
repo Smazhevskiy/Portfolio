@@ -1,4 +1,3 @@
-import './App.css'
 import {Header} from './header/Header'
 import {Main} from './main/Main'
 import {Skills} from './skills/Skills'
@@ -12,7 +11,7 @@ import {Footer} from './footer/Footer'
 
 const App = () => {
     return (
-        <div className="App">
+        <div>
             <Header/>
             <Main/>
             <Skills/>

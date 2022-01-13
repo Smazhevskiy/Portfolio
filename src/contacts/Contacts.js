@@ -45,7 +45,6 @@ export const Contacts = ({setModal}) => {
             }
             catch (e) {
                 return setSendMessage(e.message)
-
             }
         } else {
             setDisabled(false)
@@ -55,7 +54,7 @@ export const Contacts = ({setModal}) => {
     return (
         <div id="contacts" className={style.contactsBlock}>
             <div className={style.container}>
-                <Title text={'сontacts'}/>
+                <Title text={'Contacts'}/>
                 <form className={style.contactForm}>
                     <input className={style.formArea}
                            type="text"
