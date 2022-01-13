@@ -1,19 +1,43 @@
-@import "src/common/styles/sass/variables";
+@import '../../common/styles/sass/variables';
+@import '../../common/styles/sass/mixins';
 
-.skillBlock {
-    width: 260px;
-    background-color: $bgSecondColor;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 50px;
-    img {
-        width: 70px;
-        height: 70px;
-        background-color: gray;
-    }
-    .description {
-
-    }
+.skill {
+     width: 300px;
+     margin-top: 30px;
+     @include flex(column, flex-start, center, nowrap);
+     @media screen and (max-width: 1128px) {
+	    margin-top: 45px;
+	    &:first-child {
+		   margin-top: 30px;
+	    }
+     }
+     @media screen and (max-width: 630px) {
+	    width: 100%;
+     }
+     @media screen and (max-width: 600px) {
+	    width: 100%;
+     }
+     .description {
+	    text-align: center;
+	    @include text($textFontFamily, 14px, 1.8, 400);
+     }
+     .icon {
+	    height: 80px;
+	    width: 80px;
+	    background: rgba(255, 255, 255, 0.1);
+	    transform: rotate(45deg);
+	    margin-bottom: 40px;
+	    @include flex(row, center, center, nowrap);
+	    img {
+		   transform: rotate(-45deg);
+		   width: 55%;
+	    }
+     }
+     .skillTitle {
+	    @include text($titleFontFamily, 16px, 1.2, 400);
+	    text-transform: uppercase;
+	    margin: 0 0 15px;
+	    padding: 0;
+	    letter-spacing: 1px;
+     }
 }

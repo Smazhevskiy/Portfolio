@@ -1,16 +1,17 @@
-import React from "react";
-import s from './Skill.module.scss'
+import React from 'react';
+import style from './Skill.module.scss';
 
 
-
-
-export const Skill = ({title, description, icon}) => {
+const Skill=(props)=> {
     return (
-        <div className={s.skillBlock}>
-            <img src={icon} alt="icon"/>
-            <h3>{title}</h3>
-            <span className={s.description}>{description}</span>
+        <div className={style.skill}>
+            <div className={style.icon}>
+                <img src={props.icon} alt=""/>
+            </div>
+            <h3 className={style.skillTitle}>{props.title}</h3>
+            <span className={style.description}>{props.description}</span>
         </div>
     );
 }
 
+export default Skill;

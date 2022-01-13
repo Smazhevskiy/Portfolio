@@ -1,60 +1,51 @@
-@import "src/common/styles/sass/variables";
-@import "src/common/styles/sass/mixins";
+@import '../../common/styles/sass/variables';
+@import '../../common/styles/sass/mixins';
 
-.projectBlock {
-     width: 355px;
-     background-color: $bgSecondColor;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     text-align: center;
-     margin-bottom: 50px;
-     padding: 5px;
-     .img {
+.project {
+     width: 450px;
+     background: $bgColor;
+     margin-top: 30px;
+     @include flex(column, flex-start, stretch, nowrap);
+     .image {
 	    height: 300px;
-	    width: 100%;
-	    display: flex;
-	    justify-content: center;
-	    align-items: center;
-	    background-color: #f3cdcd;
-	    background-size: cover;
-	    background-position: center;
-	    background-repeat: no-repeat;
+	    @include flex(row, center, center, nowrap);
+	    @include bgSettings();
 	    position: relative;
-	    &:before {
-		   content: '';
+	    &::before {
 		   position: absolute;
-		   background-color: #8989a8;
+		   content: '';
 		   top: 0;
 		   bottom: 0;
 		   left: 0;
 		   right: 0;
-		   opacity: 0.35;
-	    }
-	    .viewBtn {
-		   background-color: #beb4b4;
-		   color: white;
-		   padding: 10px 20px;
-		   opacity: 0.6;
-		   cursor: pointer;
-		   position: relative;
-		   z-index: 1;
+		   opacity: 0.4;
+		   background-color: black;
 	    }
      }
      .projectInfo {
 	    padding: 25px 20px;
 	    .projectTitle {
-		   @include text($titleFontFamily, 16, 1.2);
-		   color: $textColor;
+		   @include text($titleFontFamily, 18px, 1.2, 1000);
 		   letter-spacing: 1px;
 		   margin: 0 0 5px;
+		   text-align: center;
 	    }
 	    .description {
-		   @include text($descriptionFontFamily, 12, 1.8);
-		   font-weight: 400;
+		   @include text($textFontFamily, 14px, 1.8, 400);
 	    }
      }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

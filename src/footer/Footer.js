@@ -1,26 +1,48 @@
-import React from "react";
+import React from 'react'
 import s from './Footer.module.scss'
-import stylesContainer from '../common/styles/Container.module.css'
+import telegramIcon from '../assets/images/telegram.svg'
+import likedInIcon from './../assets/images/linkedin.svg'
+import vkIcon from './../assets/images/vk.svg'
+import gitHubIcon from '../assets/images/gitHubIcon.png'
+import {Title} from '../common/components/title/Title'
 
 
 
 
 export const Footer = () => {
     return (
-        <div>
-            <div className={s.footerBlock}>
-                <div className={`${stylesContainer.container} ${s.footerContainer}`}>
-                    <h2>Артем Смажевский</h2>
-                    <div className={s.socialIcons}>
-                        <div className={s.socialIcon}>Vk</div>
-                        <div className={s.socialIcon}>Facebook</div>
-                        <div className={s.socialIcon}>Inst</div>
-                        <div className={s.socialIcon}>GitHub</div>
+        <div className={s.footerBlock}>
+            <div className={s.container}>
+                <Title text={'Artem Smazhevskiy'}/>
+                <div className={s.socialIcons}>
+                    <div className={s.socialIcon}>
+                        <a target={'blank'}
+                           href="https://t.me/smazhevskiy_a">
+                            <img src={telegramIcon} alt=""/>
+                        </a>
                     </div>
-                    <span className={s.copyright}>2021 All rights reserved</span>
+                    <div className={s.socialIcon}>
+                        <a target={'blank'}
+                           href="https://vk.com/smazhevskiy_a">
+                            <img src={vkIcon} alt=""/>
+                        </a>
+                    </div>
+                    <div className={s.socialIcon}>
+                        <a target={'blank'}
+                           href="https://www.linkedin.com/in/artem-zmazhevskiy-330a40215/">
+                            <img src={likedInIcon} alt=""/>
+                        </a>
+                    </div>
+                    <div className={s.socialIcon}>
+                        <a target={'blank'}
+                           href="https://github.com/Smazhevskiy">
+                            <img src={gitHubIcon} alt=""/>
+                        </a>
+                    </div>
                 </div>
-
+                <span className={s.copyright}>2022 All Rights Reserved.</span>
             </div>
         </div>
     )
 }
+

@@ -1,32 +1,28 @@
-@import "src/common/styles/sass/variables";
-
-
+@import '../../styles/sass/variables';
+@import '../../styles/sass/mixins';
 
 .title {
-     margin: 0;
+     margin: 0 0 30px;
+     font-family: 'Josefin Sans', sans-serif;
+     color: $textColor;
+     text-transform: capitalize;
+     line-height: 1.2;
+     letter-spacing: 5px;
      position: relative;
-     .text {
-	    position: relative;
-	    font-family: 'Josefin Sans', sans-serif;
-	    color: $textColor;
-	    margin: 0 0 30px;
-	    font-weight: 300;
-	    text-transform: capitalize;
+     text-align: center;
+     & h2 {
 	    font-size: 36px;
-	    line-height: 1.2;
-	    letter-spacing: 4px;
+	    margin-top: 30px;
+	    font-weight: 400;
      }
      &::before {
-	    content: '';
-	    position: absolute;
+	    content: "";
+	    background: $primaryColor;
 	    width: 55px;
 	    height: 1px;
-	    background: $primaryColor;
-	    bottom: 12px;
+	    position: absolute;
 	    left: 50%;
 	    transform: translate(-50%, 50%);
+	    bottom: 0;
      }
-
 }
-
-
