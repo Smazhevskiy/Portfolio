@@ -70,8 +70,8 @@ export const Projects = () => {
                         />
                         <Project style={gradients}
                                  title={'Gradients'}
-                                 hrefDemo={'https://smazhevskiy.github.io/VertageLabTest'}
-                                 hrefCode={'https://github.com/Smazhevskiy/VertageLabTest'}
+                                 hrefDemo={'https://github.com/Smazhevskiy/gradients'}
+                                 hrefCode={'https://smazhevskiy.github.io/gradients'}
                                  description={'Mixing two colors in #hex format with the ability to edit, delete colors and validate for a color code'}
                         />
                         <Project style={landing}
